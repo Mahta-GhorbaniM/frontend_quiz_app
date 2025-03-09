@@ -1,66 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Interactive Quizapplication</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
 </head>
 <body>
-    <!-- quiz configuration container -->
-<div class="config-container">
-    <h2 class="config-title">Quiz Configuration</h2>
-
-    <div class="config-option">
-        <h4 class="option-title">Select Category</h4> 
+    <div class="app-container">
+        <h2 class="welcome">Välkommen till quiz appen</h2>
+        <div class="about-app">
+            
+            1. Välj en kategori </br>
+            2. Välj antal frågor</br>
+            3. Starta quiz
+        </div>
+        <h3 class="category">Välj en kategori</h3>
         <div class="category-options">
-            <button class="category-option active">Geography</button>
-            <button class="category-option">Mathematics</button>
+            <button class="category-btn active">Geografi</button>
+            <button class="category-btn">Matematik</button>
+            
         </div>
-    </div> 
-
-    <div class="config-option"> 
-        <h4 class="option-title">No. of Questions</h4> 
-        <div class="question-options">
-            <button class="question-option">5</button>
-            <button class="question-option active">10</button>
-            <button class="question-option">15</button>
+      
+        <h3 class="q">Antal frågor</h3>
+        <div class="no-questions">
+            <button class="no-q active">5</button>
+            <button class="no-q">10</button>
+            <button class="no-q">15</button>
         </div>
-    </div> 
-
-    <button class="start-quiz-btn">Start Quiz</button>
-</div>
-
-
-<!-- quiz container -->
-<div class="quiz-container">
-    <header class="quiz-header">
-        <h2 class="quiz-title">Quiz Application</h2>
-        <div class="quiz-timer">
-            <span class="material-symbols-outlined">timer</span>
-            <p class="time-duration">10s</p>
+        <div class="start">
+            <button class="start-btn">Starta Quiz</button>
         </div>
-    </header>
 
-    <div class="question-text"></div>
-    <ul class="answer-options"></ul>
-        
-    <div class="quiz-footer">
-        <p class="question-status"></p>
-        <button class="next-question-btn">
-            Next
-            <span class="material-symbols-outlined">arrow_right_alt</span>
-        </button>
+
     </div>
-</div>
+    <div class="quiz-container">
+        <header class="q-header">
+            <h2 class="q-title"></h2>
+            <div class="q-timer">
+                <span class="material-symbols-outlined">
+                    timer_play
+                    </span>
+                <p class="time">10s</p>
+            </div>
 
-    <!-- result container -->
+        </header>
+        <div class="q-content">
+            <h1 class="q-question"></h1>
+            <ul class="answers">
+                
+            </ul>
+        </div>
+        <div class="q-footer">
+            <p class="q-status"></p>
+            <button class="next-btn">
+                Nästa 
+                <span class="material-symbols-outlined">
+                    arrow_right_alt
+                    </span>
+            </button>
+        </div>
+    </div>
     <div class="result-container">
         <img src="quiz-over.jpg" class="result-img">
-        <h2 class="result-title">Quiz Completed</h2>
-        <p class="result-message"></p>
-        <button class="try-again-btn">Try Again</button>
+        <h2 class="h2 result-title">Quiz avslutad</h2>
+        <p class="result-msg">
+        </p>
+        <button class="try-again">Försök igen</button>
     </div>
     <script src="javascript/questions.js"></script>
     <script src="javascript/script.js"></script>

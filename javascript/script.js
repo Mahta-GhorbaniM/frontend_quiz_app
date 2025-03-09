@@ -1,12 +1,23 @@
 
+
 document.addEventListener("DOMContentLoaded", () => {
+    const timerDisplay = document.querySelector(".time");
+    console.log(timerDisplay); // Logga för att se om timerDisplay finns
+    
+    if (!timerDisplay) {
+        console.error('Elementet .time finns inte.');
+        return;  // Stoppa koden om elementet inte finns
+    }
+    
+    // Resten av din kod här...
+
    
 
 
 const answerOptions = document.querySelector(".answers");
 const nextQuestion = document.querySelector(".next-btn");
 const questionStatus = document.querySelector(".q-status");
-const timerDisplay = document.querySelector(".time");
+// const timerDisplay = document.querySelector(".time");
 const resultCon = document.querySelector(".result-container");
 const quizCon = document.querySelector(".quiz-container");
 const appCon = document.querySelector(".app-container");
