@@ -1,0 +1,261 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:rgb(97, 97, 167)
+
+}
+
+:where(.app-container, .quiz-container,.result-container){
+    
+    background:aliceblue ;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.app-container{
+    display: block;
+    background: aliceblue;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    width: 415px;
+    padding: 20px;
+}
+
+.welcome{
+    font-size: 1.5rem;
+
+}
+
+.about-app{
+    margin-top: 25px;
+    text-align: left;
+    padding: 0 20px;
+
+}
+
+.category{
+    padding: 20px;
+    color: blue;
+}
+
+.category-options .category-btn{
+    padding:8px;
+    font-size: 0.83rem ;
+    font-weight: 500;
+    background: rgb(235, 226, 92);
+    color: rgb(45, 7, 134);
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid rgb(87, 5, 128)
+    
+
+}
+
+.no-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.no-q {
+    padding: 10px 20px;
+    font-size: 0.83rem;
+    font-weight: 500;
+    background: rgb(235, 226, 92);
+    color: rgb(45, 7, 134);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid rgb(87, 5, 128);
+}
+
+.q {
+   
+    padding: 20px;
+}
+
+.no-q:hover{
+    background: cyan;
+}
+
+.category-options .category-btn:hover,.a-option:hover
+{
+    background: cyan;
+}
+
+.start-btn,.next-btn, .try-again{
+    color:blue;
+    border: none;
+    background: aqua;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+
+}
+.start-btn{
+    margin-top: 30px;
+}
+
+.start-btn:hover , .q-footer .next-btn:hover, .try-again:hover{
+    background: rgb(0, 200, 200);
+}
+
+.quiz-container{
+    display: none;
+    width: 480px;
+}
+
+.q-content .q-question{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.quiz-container .q-header{
+    display: flex;
+    align-items: center;
+    padding: 14px 25px;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+}
+
+.q-title{
+    font-size: 1.43rem;
+    font-weight: 700;
+}
+
+.q-timer{
+    display: flex;
+    width: 70px;
+    color:aliceblue;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    padding: 7px 9px;
+    border-radius: 6px;
+    background: #32313c;
+    transition: 0.3s ease;
+}
+
+.q-timer span{
+    font-size: 1.25rem;
+}
+
+.q-content{
+    padding: 20px 25px 25px;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 20px;
+    gap: 10px;
+
+}
+
+.q-content .a-option span{
+    display: block;
+    flex-shrink: 0;
+    margin: -4px -3px -4px 12px;
+}
+.q-content .a-option{
+    display: flex;
+    align-items: center;
+    padding:13px 16px;
+    background: rgb(231, 228, 248);
+    border-radius: 6px;
+    font-weight: 500;
+    cursor:pointer;
+    justify-content: space-between;
+    border:1px solid cornflowerblue;
+    transition: 0.3s ease;
+}
+.a-option.correct{
+    border-color: rgb(195, 219, 170);
+    background: #d4edda;
+    color:#155724;
+    visibility: visible;
+   
+}   
+
+.a-option.incorrect{
+    border-color: rgb(200, 154, 186);
+    background: #fccece;
+    color:#5c220c;
+}
+
+.q-footer{
+    padding:15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(217, 211, 186);
+}
+
+.next-btn{
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    padding: 9px 17px;
+    visibility: hidden;
+}
+
+.q-footer .q-status{
+    font-weight: 500;
+}
+.q-footer .q-status b,.result-container .result-msg b{
+    font-weight: 700;
+}
+
+.result-container{
+    display:none;
+    text-align: center;
+    padding:40px;
+    width: 410px;
+
+}
+
+.result-container .result-img{
+    width: 110px;
+}
+
+.result-container .result-title{
+    margin-top: 30px;
+}
+
+.result-container .result-msg{
+    font-size: 1.125rem; 
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.try-again{
+    margin-top: 30px;
+    padding:12px 20px;
+}
+
+.category-btn.active, .no-q.active{
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #2980b9;
+}
