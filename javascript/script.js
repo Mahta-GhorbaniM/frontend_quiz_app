@@ -1,4 +1,8 @@
 
+document.addEventListener("DOMContentLoaded", () => {
+   
+
+
 const answerOptions = document.querySelector(".answers");
 const nextQuestion = document.querySelector(".next-btn");
 const questionStatus = document.querySelector(".q-status");
@@ -28,7 +32,7 @@ const showResult = () =>{
 
 }
 
-const resetTimer = () =>{
+const resetTimer = () => {
     clearInterval(timer);
     currentTime = TIME_LIMIT
     timerDisplay.textContent = `${currentTime}s`;
@@ -159,3 +163,4 @@ renderQuestion();
 nextQuestion.addEventListener("click", renderQuestion);
 document.querySelector(".try-again").addEventListener("click", restQuiz);
 document.querySelector(".start-btn").addEventListener("click", startQuiz);
+});
